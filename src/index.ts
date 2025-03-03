@@ -11,11 +11,11 @@ import exp from "node:constants";
 
 const dataSource = new DataSource({
     type: 'mariadb',
-    host: process.env.USERNAME,
+    host: process.env.HOST,
     port: 23306,
     username: process.env.USERNAME,
     password: process.env.PASSWORD,
-    database: 'node_websockets',
+    database: process.env.DATABASE,
     entities: [
         "src/entities/*.ts"
     ],
